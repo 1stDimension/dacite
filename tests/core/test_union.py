@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import Optional, List, Union, Dict
 
 import pytest
+import sys
 
 from dacite import from_dict, UnionMatchError
 
@@ -44,7 +45,10 @@ def test_from_dict_with_union_and_wrong_data():
 
     assert str(exception_info.value) == 'can not match type "float" to any type of "i" union: typing.Union[int, str]'
     assert exception_info.value.field_path == "i"
-    assert exception_info.value.field_type == Union[int, str]
+    if sys.version_info.minor >= 14:
+        assert exception_info.value.field_type == int | str
+    else:
+        assert exception_info.value.field_type == Union[int, str]
     assert exception_info.value.value == 1.0
 
 
@@ -65,7 +69,10 @@ def test_from_dict_with_union_of_data_classes_and_wrong_data():
         from_dict(Z, {"x_or_y": {"f": 2.0}})
 
     assert exception_info.value.field_path == "x_or_y"
-    assert exception_info.value.field_type == Union[X, Y]
+    if sys.version_info.minor >= 14:
+        assert exception_info.value.field_type == X | Y
+    else:
+        assert exception_info.value.field_type == Union[X, Y]
     assert exception_info.value.value == {"f": 2.0}
 
 
