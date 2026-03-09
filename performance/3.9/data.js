@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1683890643982,
-  "repoUrl": "https://github.com/konradhalas/dacite",
+  "lastUpdate": 1773061308681,
+  "repoUrl": "https://github.com/1stDimension/dacite",
   "entries": {
     "Benchmark": [
       {
@@ -1360,6 +1360,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.003089848076636114",
             "extra": "mean: 49.432095857144176 msec\nrounds: 21"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "contact@mciszczon.pl",
+            "name": "Mateusz Ciszczoń",
+            "username": "mciszczon"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": false,
+          "id": "9898ccbb783e7e6a35ae165e7deb9fa84edfe21c",
+          "message": "Merge pull request #228 from plonerma/bug/#227 - Improving type casting from list of values to mixed tuples\n\nImproving type casting from list of values to mixed tuples",
+          "timestamp": "2025-03-17T16:24:48+01:00",
+          "tree_id": "a508830a620f8cf669c48b9668257d8805536b57",
+          "url": "https://github.com/1stDimension/dacite/commit/9898ccbb783e7e6a35ae165e7deb9fa84edfe21c"
+        },
+        "date": 1773061308396,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/performance/test_from_dict.py::test_basic_scenario",
+            "value": 17653.40513280276,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000037027163904895254",
+            "extra": "mean: 56.64629528848489 usec\nrounds: 3566"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_union_matching",
+            "value": 487.7565203977365,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000024387650140453225",
+            "extra": "mean: 2.0502032431766555 msec\nrounds: 403"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_strict_unions_match",
+            "value": 485.02900850165446,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000021724025135875363",
+            "extra": "mean: 2.061732355120754 msec\nrounds: 459"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_collection_of_union",
+            "value": 6556.438024277047,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000026154103439705356",
+            "extra": "mean: 152.5218413256131 usec\nrounds: 3441"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_type_hooks",
+            "value": 482.10297662767664,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00008080374527101824",
+            "extra": "mean: 2.07424564559843 msec\nrounds: 443"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_casting",
+            "value": 152405.48518338296,
+            "unit": "iter/sec",
+            "range": "stddev: 9.259447388544774e-7",
+            "extra": "mean: 6.5614436304358925 usec\nrounds: 14059"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_forward_references",
+            "value": 486.5616875071333,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00007550942981537329",
+            "extra": "mean: 2.055237857142912 msec\nrounds: 413"
+          },
+          {
+            "name": "tests/performance/test_from_dict.py::test_parsing_multiple_items",
+            "value": 19.421582261449114,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0010303387807171136",
+            "extra": "mean: 51.48911075000058 msec\nrounds: 20"
           }
         ]
       }
